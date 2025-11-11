@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏱ Timer & Countdown</h1>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="timer">Timer</button>
+            <button class="tab" data-tab="countdown">Countdown</button>
+        </div>
+
+        <!-- TIMER -->
+        <div id="timer" class="tab-content active">
+            <div class="display" id="timerDisplay">00:00:00</div>
+            <div class="controls">
+                <button id="startTimer">▶ Iniciar</button>
+                <button id="pauseTimer">⏸ Pausar</button>
+                <button id="resetTimer">⏹ Reiniciar</button>
+            </div>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div id="countdown" class="tab-content">
+            <div class="input-group">
+                <label for="minutesInput">Minutos:</label>
+                <input type="number" id="minutesInput" min="0" placeholder="Ej: 5">
+            </div>
+            <div class="display" id="countdownDisplay">00:00</div>
+            <div class="controls">
+                <button id="startCountdown">▶ Iniciar</button>
+                <button id="pauseCountdown">⏸ Pausar</button>
+                <button id="resetCountdown">⏹ Reiniciar</button>
+            </div>
+            <p id="errorMsg" class="error"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

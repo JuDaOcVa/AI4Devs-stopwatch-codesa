@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Timer & Countdown</h1>
+            <p>Una herramienta simple y elegante para gestionar tu tiempo</p>
+        </div>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" id="timerBtn">Timer</button>
+            <button class="mode-btn" id="countdownBtn">Countdown</button>
+        </div>
+        
+        <div class="timer-display">
+            <div class="time" id="displayTime">00:00:00</div>
+            <div class="status" id="status">Listo para comenzar</div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <input type="number" class="time-input" id="hours" placeholder="Horas" min="0" max="23">
+                <input type="number" class="time-input" id="minutes" placeholder="Minutos" min="0" max="59">
+                <input type="number" class="time-input" id="seconds" placeholder="Segundos" min="0" max="59">
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" id="startBtn">Iniciar</button>
+            <button class="btn btn-secondary" id="pauseBtn" disabled>Pausar</button>
+            <button class="btn btn-danger" id="resetBtn" disabled>Reiniciar</button>
+        </div>
+        
+        <div class="presets">
+            <button class="preset-btn" data-minutes="5">5 Min</button>
+            <button class="preset-btn" data-minutes="10">10 Min</button>
+            <button class="preset-btn" data-minutes="15">15 Min</button>
+            <button class="preset-btn" data-minutes="20">20 Min</button>
+            <button class="preset-btn" data-minutes="25">25 Min</button>
+            <button class="preset-btn" data-minutes="30">30 Min</button>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">
+        ¡Tiempo completado!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
